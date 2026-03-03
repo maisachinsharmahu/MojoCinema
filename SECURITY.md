@@ -15,11 +15,11 @@ We take the security of **Mojocinema** seriously. If you believe you have found 
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them to: **sachin@mojocinema.in**
+Instead, please report them to: **sachinsharmaaofficial@gmail.com**
 
 ### Our Process
 
-1. You report the vulnerability via email.
+1. You report the vulnerability via email to **sachinsharmaaofficial@gmail.com**.
 2. We will acknowledge receipt within 48 hours.
 3. We will evaluate the report and follow up with you.
 4. If the report is valid, we will work on a fix and release it in a timely manner.
