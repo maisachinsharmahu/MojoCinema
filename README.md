@@ -1,116 +1,116 @@
-# Mojocinema 🎬 | Premium Flutter Movie & Series Discovery App
+# Mojocinema: Professional Movie Discovery Platform
 
-[![Flutter Version](https://img.shields.io/badge/Flutter-3.x-blue.svg?style=for-the-badge&logo=flutter)](https://flutter.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/maisachinsharmahu/MojoCinema?style=for-the-badge&color=gold)](https://github.com/maisachinsharmahu/MojoCinema/stargazers)
-[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey?style=for-the-badge)](https://flutter.dev)
-
-**Mojocinema** is a high-performance, open-source movie discovery application built with **Flutter**. It features a state-of-the-art **Glassmorphic UI** designed for a premium user experience. Explore the latest global trending cinema, deep-dive into **Indian Web Series**, and watch high-quality trailers—all in one place.
+Mojocinema is a high-performance, premium movie discovery application built with Flutter. It utilizes a state-of-the-art glassmorphic design system to provide an immersive experience for exploring global cinema, regional Indian content, and high-fidelity media trailers.
 
 ---
 
-## ⚡ Visual Experience (Glassmorphism & Material 3)
+## Visual Experience & Interface Design
 
 <div align="center">
   <table>
     <tr>
-      <td><img src="screenshots/1.png" width="300" alt="Home Screen - Flutter Movie App"></td>
-      <td><img src="screenshots/2.png" width="300" alt="Movie Details - TMDB Client"></td>
+      <td><img src="screenshots/1.png" width="300" alt="Mojocinema Home Dashboard"></td>
+      <td><img src="screenshots/2.png" width="300" alt="Mojocinema Media Details"></td>
     </tr>
     <tr>
-      <td><img src="screenshots/3.png" width="300" alt="Search Page - Cinema Discovery"></td>
-      <td><img src="screenshots/4.png" width="300" alt="Trailer Hub - YouTube Player Integration"></td>
+      <td><img src="screenshots/3.png" width="300" alt="Mojocinema Search Discovery"></td>
+      <td><img src="screenshots/4.png" width="300" alt="Mojocinema Trailer Hub"></td>
     </tr>
   </table>
 </div>
 
 ---
 
-## 🚀 Key Features & Discovery Engine
+## Technical UI Hierarchy & Architecture
 
-### 🌍 Global Content & Regional Focus
-- **Indian Cinema Priority**: Specialized sections for **Indian Upcoming Movies** and **Trending Indian Web Series**.
-- **Worldwide Trending**: Real-time integration with the **TMDB API** for a comprehensive global media feed.
+The application follows a modular, widget-based architecture designed for high performance and visual consistency.
 
-### 💎 Next-Gen UI/UX Design
-- **Glassmorphic Design System**: Advanced blur effects, sleek gradients, and high-fidelity transitions.
-- **Dynamic Backdrop Synchronization**: The app's atmosphere changes in real-time to match the content on screen.
-- **Responsive Layouts**: Optimized for every screen size using `flutter_screenutil`.
+### Design Philosophy: "Dynamic Glassmorphism"
+- **Layered Transparency**: Uses a hierarchy of `BackdropFilter` and `ClipRRect` to create multi-layered glass effects.
+- **Atmospheric Synchronization**: The background layer of the application dynamically reflects the color palette of the current media asset using real-time image analysis.
+- **Adaptive Typography**: Utilizes the 'Apercu' font family with a bold, high-contrast weight system (W900 for headers) to ensure readability against dynamic backgrounds.
 
-### 🎞️ Pro Media Hub
-- **Integrated YouTube Player**: Seamless trailer playback with smart fallback for missing assets.
-- **Deep Metadata Retrieval**: Access runtime, age certifications (U/A, A), high-res posters, and detailed cast biographies.
-- **Watchlist Persistence**: Save your favorite movies locally for offline planning.
-
----
-
-## 🛠️ Technical Implementation Walkthrough
-
-### 1. Unified Dashboard (`home_page.dart`)
-Optimized for **Content Discovery SEO** through an intelligent categorization engine. Features a dynamic **Hero Carousel** that filters data quality to ensure a premium look.
-
-### 2. Deep Intelligence Engine (`MovieDetails.dart`)
-A centralized information hub. We use **ValueListenable** patterns for zero-lag state management and sophisticated regex-based metadata extraction for movie certifications.
-
-### 3. Smart Media Validation
-Every image and video link is validated before rendering, preventing 404 errors and broken layouts using **CachedNetworkImage** and custom error widgets.
+### Structural Component Tree
+1. **Scaffold Manager**: Global background handling and transparent status bar management.
+2. **Flexible AppBar Layer**: A parallax-enabled `SliverAppBar` that transitions from transparent to solid obsidian-black upon scrolling.
+3. **Glassmorphic Navigation**: A semi-transparent bottom navigation unit using `ImageFilter.blur` to maintain visual continuity.
+4. **Content Carousels**: Optimized horizontal `ListView` builders with smart asset-loading guards.
 
 ---
 
-## 📦 Tech Stack & Performance Architecture
-- **Framework**: [Flutter](https://flutter.dev) (High-performance Dart)
-- **Data Provider**: [TMDB API](https://www.themoviedb.org/documentation/api) (The Movie Database)
-- **UI Architecture**: Glassmorphism + Material 3
-- **State Management**: Reactive State (ValueListenable)
-- **Local Storage**: Data persistence for Watchlists
-- **Asset Optimization**: Sophisticated font tree-shaking and image caching
+## Detailed Component Walkthrough
+
+### 1. Unified Home Dashboard (`home_page.dart`)
+The primary engine for content discovery. It integrates multiple data streams into a cohesive feed.
+- **Hero Animation System**: An interactive carousel that serves as the visual anchor. It includes data-quality validation to filter out titles with missing posters or backdrops.
+- **Categorization Logic**: A state-driven toggle system (All, Movies, TV) that dynamically updates API endpoints without refreshing the entire page.
+- **Localized Content Priority**: Specifically engineered to rank Indian regional trends and upcoming releases higher in the feed hierarchy.
+
+### 2. Deep Media Infrastructure (`MovieDetails.dart`)
+A high-density information page for movies and series.
+- **Hero Image Header**: A parallax background utilizing the movie's backdrop with a custom glass-overlay navigation system.
+- **Mojocinema Bookmark Integration**: A bespoke, animated bookmark button with real-time watchlist synchronization and visual state feedback.
+- **Technical Metadata**: Automated parsing of release dates, runtimes (converted to H:M format), and age-based certifications (U, U/A, A).
+- **Keyword Processing Engine**: Intelligently extracts tags from the TMDB database to provide immediate thematic context (e.g., #Action, #Drama, #IndianCinema).
+
+### 3. Media hub & Trailer Engine (`vid.dart`)
+- **Integrated Video Pipeline**: A full-screen YouTube integration designed for high-bitrate trailer playback.
+- **Reliability Layer**: Built-in exception handling for YouTube API failures, displaying professional glassmorphic placeholders when assets are unavailable.
+- **Secondary Assets**: Provides a scrollable list of "Teasers," "Behind the Scenes," and "Official Clips."
+
+### 4. Search & Discovery Engine (`search_page.dart`)
+- **Real-time Query Filtering**: Optimized for speed, providing instant search results as the user types.
+- **Actor Intelligence**: Dedicated integration for searching actors, directing to a full-featured Actor Detail Page with biographies and filmography.
+
+### 5. Collection Management (`watchlist_page.dart`)
+- **Persistence Layer**: Local data management for user collections.
+- **Haptic Feedback Interface**: Integrated with the bookmark system to provide physical confirmation when adding content.
 
 ---
 
-## 🚀 Getting Started
+## Technical Specifications
+
+- **UI Framework**: Flutter (Dart)
+- **Data Architecture**: TMDB REST API Integration
+- **Layout System**: ScreenUtil (Responsive scaling)
+- **Rendering Optimization**: CachedNetworkImage (Image buffering & RAM management)
+- **State Pattern**: ValueListenable & Stateful Widget persistence
+- **Dependency Management**: AGP 8.9.1 / Gradle 8.11.1 (Optimized for Java 21)
+
+---
+
+## Getting Started & Implementation
 
 ### Prerequisites
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (Stable)
-- [TMDB API Key](https://www.themoviedb.org/documentation/api)
+- Flutter SDK (Stable)
+- TMDB API Key (Available at [themoviedb.org](https://www.themoviedb.org/documentation/api))
 
-### Installation
-1. **Clone & Navigate**:
+### Configuration
+1. **Deployment**:
    ```bash
    git clone https://github.com/maisachinsharmahu/MojoCinema.git
    cd MojoCinema
-   ```
-2. **Install Dependencies**:
-   ```bash
    flutter pub get
    ```
-3. **Configure API**:
-   Rename `lib/api/example_apikey.dart` to `apikey.dart` and add your key.
-4. **Launch**:
+2. **API Secret**:
+   Rename `lib/api/example_apikey.dart` to `apikey.dart` and insert your API key into the `apikey` constant.
+3. **Production Build**:
    ```bash
-   flutter run --release
+   flutter build apk --release
    ```
 
 ---
 
-## 🤝 Contributing to Open Source
-We love contributions! Whether it's a new feature, bug fix, or UI refinement, feel free to open a Pull Request.
-1. Fork the repo.
-2. Create your feature branch.
-3. Commit and push.
-4. Open a PR.
-
----
-
-## 📜 License & Attribution
+## License & Legal Attribution
 
 Distributed under the **MIT License**.
 
-### 🎨 UI Design Attribution (Legal Requirement)
-The **Glassmorphic UI Design** and visual aesthetic are proprietary to **Sachin Sharma**. You are free to use the code, but a prominent credit to the original author is required:
+### 🎨 UI design & Visual Policy
+The UI design, technical layout, and glassmorphic aesthetic of **Mojocinema** are the intellectual property of **Sachin Sharma**. You are granted permission to build upon the code, provided that a prominent attribution is maintained:
 - **"UI Design by Sachin Sharma (Mojocinema)"**
-- Link to original repository: [https://github.com/maisachinsharmahu/MojoCinema](https://github.com/maisachinsharmahu/MojoCinema)
+- Repository: https://github.com/maisachinsharmahu/MojoCinema
 
 ---
 <div align="center">
-  <b>Built with ❤️ by <a href="https://github.com/maisachinsharmahu">Sachin Sharma</a></b>
+  <b>Developed & Maintained by <a href="https://github.com/maisachinsharmahu">Sachin Sharma</a></b>
 </div>
