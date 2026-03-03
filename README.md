@@ -1,4 +1,4 @@
-# Mojocinema: Professional Movie Discovery Platform
+# Mojocinema: Movie Discovery Platform
 
 Mojocinema is a high-performance, premium movie discovery application built with Flutter. It utilizes a state-of-the-art glassmorphic design system to provide an immersive experience for exploring global cinema, regional Indian content, and high-fidelity media trailers.
 
