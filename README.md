@@ -4,16 +4,19 @@ A high-performance, premium movie discovery application built with Flutter. Mojo
 
 ## Visual Experience
 
-<table>
-  <tr>
-    <td><img src="screenshots/1.png" width="300" alt="Home Screen"></td>
-    <td><img src="screenshots/2.png" width="300" alt="Movie Details"></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/3.png" width="300" alt="Search Page"></td>
-    <td><img src="screenshots/4.png" width="300" alt="Video Player"></td>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="screenshots/1.png" width="300" alt="Home Screen"></td>
+      <td><img src="screenshots/2.png" width="300" alt="Movie Details"></td>
+    </tr>
+    <tr>
+      <td><img src="screenshots/3.png" width="300" alt="Search Page"></td>
+      <td><img src="screenshots/4.png" width="300" alt="Video Player"></td>
+    </tr>
+  </table>
+</div>
+
 
 ## Detailed Feature Walkthrough
 
