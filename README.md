@@ -36,6 +36,29 @@ The application follows a modular, widget-based architecture designed for high p
 3. **Glassmorphic Navigation**: A semi-transparent bottom navigation unit using `ImageFilter.blur` to maintain visual continuity.
 4. **Content Carousels**: Optimized horizontal `ListView` builders with smart asset-loading guards.
 
+### Application Architecture Flow
+```mermaid
+graph TD
+    API["TMDB API (v3)"] -->|Data Stream| EM["Engine Manager"]
+    EM -->|Categorization| HP["Home Dashboard"]
+    EM -->|Deep Metadata| MDP["Movie Details Page"]
+    
+    HP -->|User Selection| MDP
+    MDP -->|Extraction| VP["Video Player (YouTube)"]
+    MDP -->|Persistence| WL["Local Watchlist"]
+    
+    subgraph "Glassmorphic UI Layer"
+        HP
+        MDP
+        WL
+    end
+    
+    subgraph "Processing Logic"
+        EM
+    end
+```
+
+
 ---
 
 ## Detailed Component Walkthrough
