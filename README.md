@@ -121,6 +121,14 @@ Contributions are welcome. Please follow these steps:
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+## License & Attribution
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT License**.
+
+### 🎨 UI Design Attribution (Mandatory)
+The User Interface (UI) design, glassmorphic layout, and visual aesthetic of **Mojocinema** are proprietary to the original author. Any redistribution, modification, or use of the code that includes the visual design/UI components **MUST** include a prominent credit in the following format:
+- **"UI Design by Sachin Sharma (Mojocinema)"**
+- Link to original repository: https://github.com/maisachinsharmahu/MojoCinema
+
+See `LICENSE` for more information.
+

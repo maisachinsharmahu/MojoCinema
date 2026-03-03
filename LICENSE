@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Sachin Sharma
+Copyright (c) 2026 Sachin Sharma (Mojocinema)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -11,6 +11,17 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+---
+
+### UI & DESIGN ATTRIBUTION REQUIREMENT
+The User Interface (UI) design, glassmorphic layout, and visual aesthetic of this project are proprietary to the original author (Sachin Sharma). 
+
+Any redistribution, modification, or use of the code that includes the visual design/UI components of **Mojocinema** MUST include a prominent credit to the original author in the following format:
+- **"UI Design by Sachin Sharma (Mojocinema)"**
+- Link to original repository: https://github.com/maisachinsharmahu/MojoCinema
+
+---
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
